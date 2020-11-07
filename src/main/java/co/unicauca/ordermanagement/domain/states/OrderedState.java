@@ -28,6 +28,11 @@ public class OrderedState extends OrderState {
     public OrderState cancel() {
         return new CanceledState(getOrder());
     }
+    
+    @Override
+    public OrderState orderedPayed(){
+        return new PayedState(getOrder());
+    }
 
     @Override
     public OrderState orderSendOut(String parcelNumber) {

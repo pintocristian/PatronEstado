@@ -81,7 +81,10 @@ public class Order {
     public void orderSendOut(String parcelNumber) {
         orderState = orderState.orderSendOut(parcelNumber);
     }
-
+   
+    public void orderedPayed() {
+        orderState = orderState.orderedPayed();
+    }
     public boolean isFinished() {
         return orderState.isFinished();
     }

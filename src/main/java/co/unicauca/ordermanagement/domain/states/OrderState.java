@@ -66,7 +66,10 @@ public abstract class OrderState {
     public OrderState orderDelivered() {
         throw new IllegalStateException("No se puede ordenar una orden cuando la orden está " + getStateDescription());
     }
-
+    
+    public OrderState orderedPayed() {
+        throw new IllegalStateException("No se puede pagar una orden cuando la orden está " + getStateDescription());
+    }
     public boolean isFinished() {
         return false;
     }
