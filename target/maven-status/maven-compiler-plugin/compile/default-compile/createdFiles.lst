@@ -1,0 +1,10 @@
+co\unicauca\serversocket\ordermanagement\domain\states\OrderState.class
+co\unicauca\serversocket\ordermanagement\domain\Line.class
+co\unicauca\serversocket\ordermanagement\domain\Order.class
+co\unicauca\serversocket\ordermanagement\domain\states\OpenState.class
+co\unicauca\serversocket\ordermanagement\domain\states\SendState.class
+co\unicauca\serversocket\ordermanagement\domain\states\CanceledState.class
+co\unicauca\serversocket\ordermanagement\domain\states\DeliveredState.class
+co\unicauca\serversocket\ordermanagement\domain\states\LostState.class
+co\unicauca\serversocket\ordermanagement\domain\Item.class
+co\unicauca\serversocket\ordermanagement\domain\states\OrderedState.class
