@@ -6,7 +6,7 @@ import co.unicauca.ordermanagement.domain.Order;
 /**
  * State
  *
- * @author Julio Hurtado, Libardo Pantoja
+ * @author Cristian Pinto,Julio Mellizo
  */
 public abstract class OrderState {
 

@@ -8,7 +8,7 @@ package co.unicauca.ordermanagement.domain.states;
 import co.unicauca.ordermanagement.domain.Order;
 /**
  *
- * @author Cristian Pinto
+ * @author Cristian Pinto,Julio Mellizo
  */
 public class PayedState extends OrderState{
 
@@ -19,6 +19,15 @@ public class PayedState extends OrderState{
     @Override
     public String getStateDescription() {
         return "Pagada";
+    }
+    
+    @Override
+    public OrderState orderSendOut(String parcelNumber) {
+        boolean v;
+        if (!getOrder().isPaymentReceived()) {
+            throw new IllegalStateException("An order should not be send out when payment is not received.");
+        }        
+        return new SendState(getOrder());  
     }
     
 }

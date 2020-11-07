@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author ahurtado
+ * @author Cristian Pinto,Julio Mellizo
  */
 public class OrderTest {
         private Order order;
@@ -38,7 +38,9 @@ public class OrderTest {
 		assertEquals("Abierta", order.whatIsTheState());
 		order.confirmOrder();
 		assertEquals("Ordenada", order.whatIsTheState());
-		order.orderSendOut("555555X");
+		order.orderedPayed(); 
+                assertEquals("Pagada",order.whatIsTheState());              
+                order.orderSendOut("555555X");
 		assertEquals("Enviada", order.whatIsTheState());
 		order.orderDelivered();
 		assertEquals("Entregada", order.whatIsTheState());
@@ -54,6 +56,8 @@ public class OrderTest {
 		assertEquals("Abierta", order.whatIsTheState());
 		order.confirmOrder();
 		assertEquals("Ordenada", order.whatIsTheState());
+                order.orderedPayed(); 
+                assertEquals("Pagada",order.whatIsTheState());
 		order.orderSendOut("555555X");
 		assertEquals("Enviada", order.whatIsTheState());
 		try{

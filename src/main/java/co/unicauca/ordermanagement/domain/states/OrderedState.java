@@ -5,7 +5,7 @@ import co.unicauca.ordermanagement.domain.Order;
 /**
  * Estado ordenado
  *
- * @author ahurtado
+ * @author Cristian Pinto,Julio Mellizo
  */
 public class OrderedState extends OrderState {
 
@@ -34,12 +34,9 @@ public class OrderedState extends OrderState {
         return new PayedState(getOrder());
     }
 
-    @Override
-    public OrderState orderSendOut(String parcelNumber) {
-        if (!getOrder().isPaymentReceived()) {
-            throw new IllegalStateException("An order should not be send out when payment is not received.");
-        }
-        return new SendState(getOrder());
+   @Override
+    public OrderState orderSendOut(String parcelNumber) {       
+        return new PayedState(getOrder());  
     }
 
 }
