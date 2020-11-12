@@ -30,4 +30,8 @@ public class PayedState extends OrderState{
         return new SendState(getOrder());  
     }
     
+    @Override
+    public OrderState cancel() {
+        return new CanceledState(getOrder());
+    }
 }
